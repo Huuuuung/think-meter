@@ -1,8 +1,8 @@
-# think-meter
+# think-meter：Claude Code 的计时工具
 
-一个 [Claude Code mod](https://code.claude.com/docs/zh-CN/plugins/mods/overview)：把终端的计时工具搬上桌面端，并把时间拆开给你看。
+一个 [Claude Code mod](https://code.claude.com/docs/zh-CN/plugins/mods/overview)：把终端的计时工具搬上 Claude 桌面端，并把时间拆开给你看。
 
-[English](./README.md)
+[English](./README.md) · 非官方社区项目，与 Anthropic 无关联，也未获其背书。
 
 终端版 Claude Code 每次回答结束会显示一行 `Cooked for 1m 6s`，但桌面 app 的 Code 标签页（截至 2026 年 10 月）不显示，回答完就不知道这一轮用了多久。think-meter 把这一行补回来，还多给了两边都没有的信息：思考了多久、输出速度、思考中的实时计时，以及在 `/think-stats` 里看时间花在哪里（思考、输出、工具、等待）。在终端里也能用，总时长和官方的口径一致。
 

@@ -6,7 +6,7 @@
   "homepage": "https://github.com/Huuuuung/think-meter",
   "repository": "https://github.com/Huuuuung/think-meter",
   "license": "MIT",
-  "keywords": ["mod", "thinking", "latency", "tokens-per-second", "metrics"],
+  "keywords": ["claude", "claude-code", "claude-code-mod", "claude-code-plugin", "mod", "thinking", "latency", "tokens-per-second", "metrics"],
   "userConfig": {
     "showTurnLine": {
       "type": "boolean",

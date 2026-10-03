@@ -1,8 +1,8 @@
-# think-meter
+# think-meter: a turn timer for Claude Code
 
-A [Claude Code mod](https://code.claude.com/docs/en/plugins/mods/overview) that brings the terminal's turn timer to the desktop app, and breaks it down.
+A [Claude Code mod](https://code.claude.com/docs/en/plugins/mods/overview) that brings the terminal's turn timer to the Claude desktop app, and breaks it down.
 
-[中文说明](./README.zh-CN.md)
+[中文说明](./README.zh-CN.md) · An unofficial community project, not affiliated with or endorsed by Anthropic.
 
 In the terminal, Claude Code ends each answer with a line like `Cooked for 1m 6s`. The desktop app's Code tab doesn't show it (as of October 2026), so once a turn finishes you can't tell how long it took. think-meter adds that line back, with what neither shows: how long Claude thought, how fast it wrote, a live thinking timer, and in `/think-stats` where the time went (thinking, writing, tools, waiting). It works the same in the terminal, where its total matches the built-in one.
 

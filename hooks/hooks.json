@@ -1,0 +1,4 @@
+{
+  "description": "think-meter hooks module",
+  "modules": ["./register.ts"]
+}

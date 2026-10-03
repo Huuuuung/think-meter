@@ -1,0 +1,14 @@
+{
+  "name": "think-meter",
+  "owner": { "name": "Huuuuung", "url": "https://github.com/Huuuuung" },
+  "description": "think-meter: the terminal's turn timer for the Claude Code desktop app, broken down",
+  "plugins": [
+    {
+      "name": "think-meter",
+      "source": "./",
+      "description": "Brings the terminal's turn timer to the desktop app: how long each answer took, split into wait, thinking, writing and tools, with tok/s, a live thinking timer and /think-stats",
+      "version": "0.1.0",
+      "license": "MIT"
+    }
+  ]
+}

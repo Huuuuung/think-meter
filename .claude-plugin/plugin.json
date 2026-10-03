@@ -1,0 +1,24 @@
+{
+  "name": "think-meter",
+  "version": "0.1.0",
+  "description": "Brings the terminal's turn timer to the desktop app: how long each answer took, split into wait, thinking, writing and tools, with tok/s, a live thinking timer and /think-stats",
+  "author": { "name": "Huuuuung", "url": "https://github.com/Huuuuung" },
+  "homepage": "https://github.com/Huuuuung/think-meter",
+  "repository": "https://github.com/Huuuuung/think-meter",
+  "license": "MIT",
+  "keywords": ["mod", "thinking", "latency", "tokens-per-second", "metrics"],
+  "userConfig": {
+    "showTurnLine": {
+      "type": "boolean",
+      "title": "Show the line under each answer",
+      "description": "Print thinking time, output tokens and tok/s under each answer",
+      "default": true
+    },
+    "liveSpinner": {
+      "type": "boolean",
+      "title": "Live thinking timer",
+      "description": "Show elapsed thinking time beside the spinner while Claude thinks",
+      "default": true
+    }
+  }
+}

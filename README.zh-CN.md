@@ -9,7 +9,7 @@
 每个回答下方，沿用终端那行的写法：
 
 ```
-✻ Cooked for 55s · thinking 3.9s · 132 tok/s
+Cooked for 55s · thinking 3.9s · 132 tok/s
 ```
 
 ![桌面 app 里回答下方的统计行](docs/turn-line.png)
@@ -23,7 +23,7 @@ Pondering · thinking 3s…
 输入 `/think-stats` 查看本次会话的统计：
 
 ```
-✻ 12 turns · 6m 41s in all · 24s median
+12 turns · 6m 41s in all · 24s median
 thinking 48s · writing 1m 2s · tools 4m 13s · waiting 38s · other 10s
 claude-opus-5-5 · 31 requests · 18,402 output tok · 142 tok/s · 1.2s median wait
 ```

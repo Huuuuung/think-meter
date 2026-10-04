@@ -1,6 +1,6 @@
 {
   "name": "think-meter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Brings the terminal's turn timer to the desktop app: how long each answer took, split into wait, thinking, writing and tools, with tok/s, a live thinking timer and /think-stats",
   "author": { "name": "Huuuuung", "url": "https://github.com/Huuuuung" },
   "homepage": "https://github.com/Huuuuung/think-meter",

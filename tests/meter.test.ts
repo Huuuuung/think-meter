@@ -86,13 +86,13 @@ test('median handles odd, even and empty lists', async () => {
 test('turn line sums requests and flags interruptions', async () => {
   const step = { model: 'm', ttftMs: 0, thinkMs: 1000, streamMs: 2000, outputTokens: 100, sawThinkingText: true }
   const turn = addStep(addStep(emptyTurn(), step), step)
-  expect(formatTurnLine(turn, false, 'Cooked')).toBe('✻ Cooked for 4.0s · thinking 2.0s · 50 tok/s')
-  expect(formatTurnLine(turn, true)).toBe('✻ Interrupted after 4.0s · thinking 2.0s · 50 tok/s')
+  expect(formatTurnLine(turn, false, 'Cooked')).toBe('Cooked for 4.0s · thinking 2.0s · 50 tok/s')
+  expect(formatTurnLine(turn, true)).toBe('Interrupted after 4.0s · thinking 2.0s · 50 tok/s')
 })
 
 test('the line leaves off thinking under a second and a rate it cannot trust', async () => {
   const quick = { model: 'm', ttftMs: 800, thinkMs: 300, streamMs: 400, outputTokens: 20, sawThinkingText: false }
-  expect(formatTurnLine(addStep(emptyTurn(), quick), false, 'Brewed')).toBe('✻ Brewed for 1.2s')
+  expect(formatTurnLine(addStep(emptyTurn(), quick), false, 'Brewed')).toBe('Brewed for 1.2s')
 })
 
 test('coveredMs counts overlapping tool calls once', async () => {
@@ -113,7 +113,7 @@ test('breakdown adds up to the turn total', async () => {
     toolMs: 9000,
     otherMs: 5000,
   })
-  expect(formatTurnLine(turn, false)).toBe('✻ Worked for 20s · thinking 3.0s · 20 tok/s')
+  expect(formatTurnLine(turn, false)).toBe('Worked for 20s · thinking 3.0s · 20 tok/s')
 })
 
 test('a reported total shorter than the measured parts gives way to them', async () => {
@@ -129,7 +129,7 @@ test('session summary groups requests by model', async () => {
   const summary = formatSessionSummary([finishTurn(addStep(addStep(emptyTurn(), a), b), 12000, 4000)], [a, b])
   expect(summary).toBe(
     [
-      '✻ 1 turn · 12s in all · 12s median',
+      '1 turn · 12s in all · 12s median',
       'thinking 2.0s · writing 3.0s · tools 4.0s · waiting 1.5s · other 1.5s',
       'opus · 1 request · 400 output tok · 100 tok/s · 1.0s median wait',
       'sonnet · 1 request · 90 output tok · 90 tok/s · 0.5s median wait',

@@ -48,7 +48,7 @@ response is still streaming. After changing anything in the `turn.step` or
 2. Ask something that makes Claude think, e.g. a small logic puzzle.
 3. The spinner should read `… · thinking Ns…` and count up while Claude thinks.
 4. The timer should disappear as soon as text or a tool call starts.
-5. A line such as `✻ Cooked for 12s · thinking 4.1s · 86 tok/s` should appear under the answer.
+5. A line such as `Cooked for 12s · thinking 4.1s · 86 tok/s` should appear under the answer.
 6. `/think-stats` should list the turn.
 
 ## Releasing

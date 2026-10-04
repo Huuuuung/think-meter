@@ -209,13 +209,13 @@ export function formatParts(b: TurnBreakdown, withOther: boolean): string {
 }
 
 /**
- * The line shown under an answer: "✻ Cooked for 55s · thinking 3.9s · 132 tok/s".
+ * The line shown under an answer: "Cooked for 55s · thinking 3.9s · 132 tok/s".
  * Thinking under a second and a rate from too short a sample are left off;
  * the full split is in /think-stats.
  */
 export function formatTurnLine(turn: TurnStats, isAborted: boolean, word = 'Worked'): string {
   const b = breakdown(turn)
-  const parts = [isAborted ? '✻ Interrupted after ' + formatSpan(b.totalMs) : '✻ ' + word + ' for ' + formatSpan(b.totalMs)]
+  const parts = [isAborted ? 'Interrupted after ' + formatSpan(b.totalMs) : word + ' for ' + formatSpan(b.totalMs)]
   if (b.thinkMs >= MIN_PART_MS_TO_SHOW) parts.push('thinking ' + formatSpan(b.thinkMs))
   const rate = tokensPerSecond(turn.outputTokens, turn.streamMs)
   if (rate !== null) parts.push(rate.toFixed(0) + ' tok/s')
@@ -270,8 +270,7 @@ export function formatSessionSummary(turns: TurnStats[], steps: StepStats[]): st
     otherMs: sum((b) => b.otherMs),
   }
   lines.push(
-    '✻ ' +
-      count(turns.length, 'turn') +
+    count(turns.length, 'turn') +
       ' · ' +
       formatSpan(totals.totalMs) +
       ' in all · ' +

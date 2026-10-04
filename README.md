@@ -9,7 +9,7 @@ In the terminal, Claude Code ends each answer with a line like `Cooked for 1m 6s
 Under each answer, in the terminal line's own words:
 
 ```
-✻ Cooked for 55s · thinking 3.9s · 132 tok/s
+Cooked for 55s · thinking 3.9s · 132 tok/s
 ```
 
 ![The line under an answer in the Claude Code desktop app](docs/turn-line.png)
@@ -23,7 +23,7 @@ Pondering · thinking 3s…
 And `/think-stats` for the session so far:
 
 ```
-✻ 12 turns · 6m 41s in all · 24s median
+12 turns · 6m 41s in all · 24s median
 thinking 48s · writing 1m 2s · tools 4m 13s · waiting 38s · other 10s
 claude-opus-5-5 · 31 requests · 18,402 output tok · 142 tok/s · 1.2s median wait
 ```

@@ -4,6 +4,13 @@ All notable changes to this project are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project follows [Semantic Versioning](https://semver.org/).
 
+## [0.1.1] - 2026-10-04
+
+### Changed
+
+- The line under each answer and the first line of `/think-stats` no longer start with `✻`. That glyph is close to Claude's logo, and this is an unofficial project. The line now reads `Cooked for 55s · thinking 3.9s · 132 tok/s`
+- The README explains how to turn mods on for the desktop app as well as the terminal
+
 ## [0.1.0] - 2026-10-03
 
 First release. Tested with Claude Code 2.1.285 (CLI) and 2.1.286 (desktop app).

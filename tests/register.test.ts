@@ -2,7 +2,7 @@ import { expect, test } from 'claude-code/testing'
 import { turnWord } from '../hooks/meter.ts'
 
 /** How the line under an answer opens for a turn id. */
-const opens = (turnId: string, span: string) => '✻ ' + turnWord(turnId) + ' for ' + span
+const opens = (turnId: string, span: string) => '' + turnWord(turnId) + ' for ' + span
 
 /**
  * A hand-driven clock: the mod's $.clock.now() returns whatever the test or a
@@ -253,7 +253,7 @@ test('marks an interrupted turn', async ($, on) => {
 
   await drain($.turn.step({ turnId: 't4', index: 0, model: 'claude-test', messageCount: 1 }))
   await $.turn.complete(complete('t4', { isAborted: true, reason: 'aborted' }))
-  expect(await draw($, 'hello')).toBe(under('hello', '✻ Interrupted after 2.1s · thinking 1.0s · 50 tok/s'))
+  expect(await draw($, 'hello')).toBe(under('hello', 'Interrupted after 2.1s · thinking 1.0s · 50 tok/s'))
 })
 
 test('/think-stats summarises the session', async ($, on) => {
@@ -265,7 +265,7 @@ test('/think-stats summarises the session', async ($, on) => {
   await $.turn.complete(complete('t5'))
   const stats = await $.command.run({ command: 'think-stats', args: '' })
 
-  expect(stats.text).toContain('✻ 1 turn · 4.5s in all · 4.5s median')
+  expect(stats.text).toContain('1 turn · 4.5s in all · 4.5s median')
   // waiting (0.5 s) is under a second, so it is left out like on the line
   expect(stats.text).toContain('\nthinking 2.0s · writing 2.0s\n')
   expect(stats.text).toContain('claude-test · 1 request · 400 output tok · 100 tok/s · 0.5s median wait')

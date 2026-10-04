@@ -32,7 +32,13 @@ claude-opus-5-5 · 31 requests · 18,402 output tok · 142 tok/s · 1.2s median 
 
 Tested with Claude Code 2.1.285 (CLI) and 2.1.286 (desktop app). Check yours with `claude --version`.
 
-> **Mods are in early access.** If think-meter installs but nothing shows up, mods aren't on for your setup yet. For the CLI, start Claude Code with `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS=1` in its environment. Running `claude --debug` prints why a mod didn't load.
+> **Mods are in early access.** If think-meter installs but nothing shows up, mods aren't on for your setup yet. Add this to `~/.claude/settings.json`, then start a new chat. It works for both the terminal and the desktop app:
+>
+> ```json
+> "env": { "CLAUDE_CODE_ENABLE_FUNCTION_HOOKS": "1" }
+> ```
+>
+> This turns on mods from every plugin you install, not just this one. Running `claude --debug` prints why a mod didn't load.
 
 In Claude Code:
 

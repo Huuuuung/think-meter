@@ -32,7 +32,13 @@ claude-opus-5-5 · 31 requests · 18,402 output tok · 142 tok/s · 1.2s median 
 
 已在 Claude Code 2.1.285（CLI）和 2.1.286（桌面 app）测试。用 `claude --version` 查看你的版本。
 
-> **Mod 功能目前是 early access。** 如果装上后什么都没显示，说明你的环境还没开启 mod。CLI 可以在启动 Claude Code 的环境里设置 `CLAUDE_CODE_ENABLE_FUNCTION_HOOKS=1`。运行 `claude --debug` 可以看到 mod 没加载的原因。
+> **Mod 功能目前是 early access。** 如果装上后什么都没显示，说明你的环境还没开启 mod。把下面这项加进 `~/.claude/settings.json`，然后开一个新对话，终端和桌面 app 都适用：
+>
+> ```json
+> "env": { "CLAUDE_CODE_ENABLE_FUNCTION_HOOKS": "1" }
+> ```
+>
+> 这会让你安装的所有插件里的 mod 都生效，不只是这一个。运行 `claude --debug` 可以看到 mod 没加载的原因。
 
 ```
 /plugin marketplace add Huuuuung/think-meter
